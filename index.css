@@ -1,0 +1,276 @@
+@keyframes blinking {
+  0%, 5% {
+    opacity: 0;
+  }
+
+  10%, 20% {
+    opacity: 1;
+  }
+
+  15%, 25%, 100% {
+    opacity: 0;
+  }
+}
+
+@keyframes main {
+  0%, 50%, 100% {
+    opacity: 0;
+  }
+
+  10%, 45% {
+    opacity: 1;
+  }
+}
+
+@keyframes main-txt {
+  0%, 60%, 100% {
+    opacity: 0;
+  }
+
+  10%, 50% {
+    opacity: 1;
+    transform: translateX(217px);
+  }
+}
+
+@keyframes main-txt2 {
+  0%, 60%, 100% {
+    opacity: 0;
+  }
+
+  10%, 50% {
+    opacity: 1;
+    transform: translateX(217px);
+  }
+}
+
+@keyframes main-txt3 {
+  0%, 60%, 100% {
+    opacity: 0;
+  }
+
+  10%, 50% {
+    opacity: 1;
+    transform: translateX(217px);
+  }
+}
+
+@keyframes last {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+
+  10%, 45% {
+    opacity: 0;
+  }
+}
+
+@keyframes last-txt {
+  0%, 60%, 100% {
+    opacity: 0;
+  }
+
+  10%, 50% {
+    opacity: 1;
+    transform: translateX(218px);
+  }
+}
+
+@keyframes last-txt2 {
+  0%, 60%, 100% {
+    opacity: 0;
+  }
+
+  10%, 50% {
+    opacity: 1;
+    transform: translateX(318px);
+  }
+}
+
+@keyframes last-txt3 {
+  0%, 60%, 100% {
+    opacity: 0;
+  }
+
+  10%, 50% {
+    opacity: 1;
+    transform: translateX(218px);
+  }
+}
+
+.blinking {
+  animation: blinking 8s infinite ease-in-out;
+  animation-delay: 1s;
+}
+
+.main {
+  width: 300px;
+  height: 600px;
+  margin: 0;
+  padding: 0;
+  background-image: url(./main-back.png);
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  animation: main 8s infinite linear;
+  animation-fill-mode: forwards;
+}
+
+
+.main__r-ellipse {
+  position: absolute;
+  width: 45px;
+  height: 41px;
+  left: 265px;
+  top: 243px;
+  background-image: url(./r-ellipse.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+
+.main__l-ellipse {
+  position: absolute;
+  width: 85px;
+  height: 46px;
+  left: 163px;
+  top: 240px;
+  background-image: url(./l-ellipse.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+
+.main__txl {
+  width: 279px;
+  margin: 389px auto 0;
+}
+
+.main__txt {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 75px;
+  height: 24px;
+  left: -200px;
+  top: 389px;
+  animation: main-txt 8s infinite ease;
+  animation-fill-mode: forwards;
+}
+
+.main__txt2 {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 93px;
+  height: 24px;
+  left: -200px;
+  top: 413px;
+  animation: main-txt2 8s infinite ease;
+  animation-delay: .5s;
+  animation-fill-mode: forwards;
+}
+
+.main__txt3 {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 171px;
+  height: 24px;
+  left: -200px;
+  top: 437px;
+  animation: main-txt3 8s infinite ease;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+.main__logo {
+  margin: 38px 0 0;
+  align-self: flex-end;
+  width: 245px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 300px;
+  height: 600px;
+}
+
+.page {
+  margin: 0;
+  padding: 0;
+  width: 300px;
+  height: 600px;
+  position: relative;
+  background-color: #000;
+}
+
+.last {
+  overflow: hidden;
+  width: 300px;
+  height: 600px;
+  margin: 0;
+  padding: 0;
+  background-image: url(./last-back.png);
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  animation: main 8s infinite linear;
+  animation-delay: 4s;
+  animation-fill-mode: forwards;
+}
+
+.last-animate {
+  transform: translateX(-243px);
+}
+
+.last__title {
+  margin: 0;
+  padding: 0;
+  width: 97px;
+  height: 24px;
+  position: absolute;
+  left: -200px;
+  top: 114px;
+  animation: last-txt 8s infinite ease;
+  animation-delay: 4s;
+  animation-fill-mode: forwards;
+}
+
+.last__title2 {
+  margin: 0;
+  padding: 0;
+  width: 251px;
+  height: 24px;
+  position: absolute;
+  left: -300px;
+  top: 138px;
+  animation: last-txt2 8s infinite ease;
+  animation-delay: 4.3s;
+  animation-fill-mode: forwards;
+}
+
+.last__title3 {
+  margin: 0;
+  padding: 0;
+  width: 141px;
+  height: 24px;
+  position: absolute;
+  left: -200px;
+  top: 172px;
+  animation: last-txt3 8s infinite ease;
+  animation-delay: 4.8s;
+  animation-fill-mode: forwards;
+}
+
